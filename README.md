@@ -29,4 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## Translation 
-ng xi18n --output-path src/locale --out-file messages.fr.xlf 
+`ng xi18n` use `--output-path src/locale` for output path and use `--out-file messages.fr.xlf` for output file name 
