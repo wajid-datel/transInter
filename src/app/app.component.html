@@ -1,3 +1,38 @@
 <h1>
   {{title}}
 </h1>
+<br />
+
+<select (change)="languageChanged($event.target.value)">
+  <option value="es" [attr.selected]="selectedLanguage == 'es' ? true: null"> Español</option>
+  <option value="en" [attr.selected]="selectedLanguage == 'en' ? true: null"> English</option>
+  <option value="fr" [attr.selected]="selectedLanguage == 'fr' ? true: null"> French</option>
+</select>
+
+<h1 i18n>Hello i18n!</h1>
+<br />
+
+<h1 i18n>Hello i18n!</h1>
+<br />
+
+<h1 i18n="User welcome|An introduction header for this sample">Hello i18n!</h1>
+<br />
+
+<ng-container i18n>I don't output any element</ng-container>
+<br />
+
+<!--i18n: optional meaning|optional description -->
+I don't output any element either
+<!--/i18n-->
+<br />
+
+<img [src]="logo" i18n-title title="Angular logo" />
+<br />
+<img [src]="logo" i18n-title="<meaning>|<description>" title="Angular logo" />
+<br />
+
+
+<span i18n>{wolves, plural, =0 {no wolves} =1 {one wolf} =2 {two wolves} other {a wolf pack}}</span>
+<br />
+<span i18n>The hero is {gender, select, m {male} f {female}}</span>
+<br />
